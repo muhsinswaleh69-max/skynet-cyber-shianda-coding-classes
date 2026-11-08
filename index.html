@@ -10,16 +10,16 @@ body{background:#023040;color:#6ee7ff}
 header{background:#04222e;padding:14px 15px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
 .logo{font-size:28px;font-weight:900;line-height:1}.logo b{color:#e11d2e}.logo b:nth-child(2){color:#0e8ec2}.logo small{display:block;font-size:9px;letter-spacing:1px;color:#0e8ec2;font-family:Arial}
 .menu{background:linear-gradient(90deg,#2b5aa6,#00e5ff);border:none;padding:10px 22px;border-radius:8px;font-weight:900;font-size:16px}
-.card{background:#0a1a2e;border:1px solid #00e5ff33;border-radius:18px;padding:28px 20px;margin:15px 0;box-shadow:0 0 25px #00e5ff22}
+.card{background:#0a1a2e;border:1px solid #00e5ff33;border-radius:18px;padding:28px 20px;margin:15px 0}
 .card h2{text-align:center;color:#6fffe0;text-shadow:0 0 12px #00e5ff;font-size:30px;margin-bottom:15px}
 .card p{font-size:19px;line-height:1.5;text-align:center}.card h3{color:#6fffe0;text-align:center;font-size:24px;margin:12px 0 8px}
-.btn{display:block;background:linear-gradient(90deg,#2b5aa6,#00e5ff);color:#000;text-align:center;padding:14px;border-radius:10px;text-decoration:none;font-weight:900;font-size:19px;margin-top:18px}
+.btn{display:block;background:linear-gradient(90deg,#2b5aa6,#00e5ff);color:#000;text-align:center;padding:14px;border-radius:10px;text-decoration:none;font-weight:900;font-size:19px;margin-top:18px;cursor:pointer;border:none;width:100%}
 .white{color:#fff;text-shadow:0 0 15px #fff;font-size:34px;text-align:center;line-height:1.2}
 .section{padding:20px 15px}.grid{display:grid;gap:16px}
 .course{background:#0a1a2e;border-radius:18px;padding:22px;text-align:center;border:1px solid #00e5ff33}
 .course b{color:#fff;font-size:22px}.course p{color:#6ee7ff;font-size:16px;line-height:1.5;margin:10px 0}.price{color:#fff;font-size:26px;font-weight:bold}
 table{width:100%;border-collapse:collapse;background:#0a1a2e;border-radius:12px;overflow:hidden}th,td{padding:12px 8px;text-align:left;border-bottom:1px solid #00e5ff22;font-size:15px;color:#6ee7ff}th{background:#00e5ff;color:#000}td b{color:#fff}
-.float{position:fixed;left:12px;z-index:30;display:flex;flex-direction:column;gap:8px;bottom:20px}.float a{padding:11px 14px;border-radius:8px;color:#fff;text-decoration:none;font-weight:bold;font-size:15px;cursor:pointer}
+.float{position:fixed;left:12px;z-index:30;display:flex;flex-direction:column;gap:8px;bottom:20px}.float button{padding:11px 14px;border-radius:8px;color:#fff;font-weight:bold;font-size:15px;border:none;cursor:pointer;text-align:left}
 .top{position:fixed;right:12px;bottom:20px;background:#00e5ff;color:#000;padding:12px 16px;border-radius:10px;font-weight:900;z-index:30;text-decoration:none}
 footer{background:#020d18;padding:30px 15px;text-align:center}footer input{width:100%;padding:14px;border-radius:10px;border:1px solid #00e5ff;background:transparent;color:#fff;margin:12px 0}
 .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);z-index:100;padding:15px;overflow:auto}
@@ -34,13 +34,13 @@ footer{background:#020d18;padding:30px 15px;text-align:center}footer input{width
 <header><div class="logo"><b>SKY</b><b>NET</b><small>SKYNET CYBER SHIANDA</small></div><button class="menu" onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">MENU</button></header>
 
 <div class="section">
-<div class="card"><h2>Who We Are</h2><p>SKYNET Cyber Shianda Coding Classes is a dynamic ICT training centre in Shianda, specializing in coding, web design and digital skills for students, job seekers and businesses.</p></div>
+<div class="card"><h2>Who We Are</h2><p>SKYNET Cyber Shianda Coding Classes is a dynamic ICT training centre in Shianda, specializing in coding, web design and digital skills.</p></div>
 <div class="card"><h2>Our Mission</h2><p>We empower students in Shianda through practical coding skills, bridging the gap between technology and local opportunities.</p></div>
-<div class="card"><h2>Our Vision</h2><p>To be the leading provider of coding and ICT training in Western Kenya, recognized for excellence, innovation and student-centred learning.</p></div>
+<div class="card"><h2>Our Vision</h2><p>To be the leading provider of coding and ICT training in Western Kenya.</p></div>
 </div>
 
 <div class="section">
-<h2 style="text-align:center;color:#6fffe0;text-shadow:0 0 12px #00e5ff;font-size:30px">Our Core Values</h2>
+<h2 style="text-align:center;color:#6fffe0;font-size:30px">Our Core Values</h2>
 <div class="grid"><div class="card"><h3>💎 Innovation</h3><p>Cutting-edge coding and creative problem-solving.</p></div><div class="card"><h3>🛡️ Integrity</h3><p>Transparent teaching - KSh 3,500/month.</p></div><div class="card"><h3>👥 Collaboration</h3><p>Working with students and parents to succeed.</p></div><div class="card"><h3>📈 Excellence</h3><p>Perfection in every lesson and project.</p></div></div>
 </div>
 
@@ -71,23 +71,20 @@ footer{background:#020d18;padding:30px 15px;text-align:center}footer input{width
 <div class="card"><h3>Contact Us</h3><p>Have questions? Reach out.</p><a class="btn" href="https://wa.me/254718899014">Contact Us</a></div>
 </div>
 
-<footer><h2 style="color:#6fffe0">Subscribe</h2><p>Stay up to date with classes & insights.</p><input placeholder="Enter your email"><a class="btn" href="https://wa.me/254718899014?text=Hi! Subscribe me">Subscribe</a><p style="margin-top:20px;color:#fff">SKYNET CYBER SHIANDA<br>📍 Shianda | 📱 0718899014 | © 2026</p></footer>
+<footer><h2 style="color:#6fffe0">Subscribe</h2><p>Stay up to date with classes.</p><input placeholder="Enter your email"><a class="btn" href="https://wa.me/254718899014?text=Hi! Subscribe me">Subscribe</a><p style="margin-top:20px;color:#fff">SKYNET CYBER SHIANDA<br>📍 Shianda | 📱 0718899014 | © 2026</p></footer>
 
 <div class="float">
-<a style="background:#ff3b30" onclick="openModal('reviewsModal')">G Reviews</a>
-<a style="background:#2b3a8f" onclick="openModal('clientsModal')">🤝 Clients Area</a>
-<a style="background:#25D366" href="https://wa.me/254718899014">💬 Chat Us</a>
-<a style="background:#7b2ff7" onclick="openCourse('html')">🤖 AI Notes</a>
+<button style="background:#ff3b30" onclick="openModal('reviewsModal')">G Reviews</button>
+<button style="background:#2b3a8f" onclick="openModal('clientsModal')">🤝 Clients Area</button>
+<button style="background:#25D366" onclick="window.open('https://wa.me/254718899014','_blank')">💬 Chat Us</button>
+<button style="background:#7b2ff7" onclick="openCourse('html')">🤖 AI Notes</button>
 </div>
 <a class="top" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">^</a>
 
-<!-- REVIEWS -->
 <div id="reviewsModal" class="modal"><div class="modalBox"><h2 style="color:#6fffe0;text-align:center">⭐ Google Reviews</h2><p style="text-align:center;color:#fff;margin:10px">4.9 / 5 - Loved in Shianda</p><div style="background:#fff;color:#111;padding:14px;border-radius:12px;margin:8px 0"><b>⭐⭐⭐⭐⭐ Mary W. - HTML</b><br>"I knew nothing, now I built my own website!"</div><div style="background:#fff;color:#111;padding:14px;border-radius:12px;margin:8px 0"><b>⭐⭐⭐⭐⭐ Kevin O. - Python</b><br>"Python made easy. I now do small jobs."</div><div style="background:#fff;color:#111;padding:14px;border-radius:12px;margin:8px 0"><b>⭐⭐⭐⭐⭐ Faith N. - Graphic</b><br>"I now design posters for my business."</div><button onclick="closeModal('reviewsModal')" style="width:100%;padding:12px;border-radius:10px;border:none;background:#ff3b30;color:#fff;font-weight:bold;margin-top:10px">Close ✕</button></div></div>
 
-<!-- CLIENTS -->
-<div id="clientsModal" class="modal"><div class="modalBox"><h2 style="color:#6fffe0;text-align:center">🤝 Clients / Students Area</h2><p style="text-align:center;margin:10px">Welcome back, SKYNET Student!</p><input id="clientName" placeholder="Enter Your Name" style="width:100%;padding:13px;border-radius:10px;border:1px solid #00e5ff;background:transparent;color:#fff;margin:8px 0"><select id="clientCourse" style="width:100%;padding:13px;border-radius:10px;background:#04222e;color:#fff;margin:8px 0"><option value="html">HTML / CSS / JAVASCRIPT</option><option value="python">PYTHON</option><option value="web">WEB DESIGN</option><option value="graphic">GRAPHIC DESIGN</option></select><button onclick="enterPortal()" style="width:100%;padding:13px;border-radius:10px;border:none;background:linear-gradient(90deg,#2b5aa6,#00e5ff);font-weight:900">Enter My Portal →</button><div id="portalBox" style="display:none;margin-top:15px;background:#fff;color:#111;padding:15px;border-radius:12px"><b>✅ Welcome, <span id="showName"></span>!</b><br>📚 Course: <b><span id="showCourse"></span></b><br>🕒 Next Class: Today 9:30 AM - 5:30 PM<br>✅ Your notes are ready below - No WhatsApp needed!<br><br><button onclick="openCourseFromPortal()" style="width:100%;padding:13px;border-radius:10px;border:none;background:#7b2ff7;color:#fff;font-weight:bold">🤖 Open My AI Notes & Lessons →</button></div><button onclick="closeModal('clientsModal')" style="width:100%;margin-top:12px;padding:12px;border-radius:10px;border:none;background:#2b3a8f;color:#fff;font-weight:bold">Close ✕</button></div></div>
+<div id="clientsModal" class="modal"><div class="modalBox"><h2 style="color:#6fffe0;text-align:center">🤝 Clients / Students Area</h2><p style="text-align:center;margin:10px">Welcome back, SKYNET Student!</p><input id="clientName" placeholder="Enter Your Name" style="width:100%;padding:13px;border-radius:10px;border:1px solid #00e5ff;background:transparent;color:#fff;margin:8px 0"><select id="clientCourse" style="width:100%;padding:13px;border-radius:10px;background:#04222e;color:#fff;margin:8px 0"><option value="html">HTML / CSS / JAVASCRIPT</option><option value="python">PYTHON</option><option value="web">WEB DESIGN</option><option value="graphic">GRAPHIC DESIGN</option></select><button onclick="enterPortal()" style="width:100%;padding:13px;border-radius:10px;border:none;background:linear-gradient(90deg,#2b5aa6,#00e5ff);font-weight:900">Enter My Portal →</button><div id="portalBox" style="display:none;margin-top:15px;background:#fff;color:#111;padding:15px;border-radius:12px"><b>✅ Welcome, <span id="showName"></span>!</b><br>📚 Course: <b><span id="showCourse"></span></b><br>🕒 Next Class: Today 9:30 AM - 5:30 PM<br>✅ Your notes are ready below!<br><br><button onclick="openCourseFromPortal()" style="width:100%;padding:13px;border-radius:10px;border:none;background:#7b2ff7;color:#fff;font-weight:bold">🤖 Open My AI Notes & Lessons →</button></div><button onclick="closeModal('clientsModal')" style="width:100%;margin-top:12px;padding:12px;border-radius:10px;border:none;background:#2b3a8f;color:#fff;font-weight:bold">Close ✕</button></div></div>
 
-<!-- AI NOTES / LESSONS -->
 <div id="notesModal" class="modal"><div class="modalBox" style="max-width:700px">
 <h2 style="color:#6fffe0;text-align:center">🤖 SKYNET AI Teacher</h2>
 <p style="text-align:center;font-size:13px" id="courseTitle">Course</p>
@@ -100,8 +97,8 @@ footer{background:#020d18;padding:30px 15px;text-align:center}footer input{width
 </div>
 <div class="aiBox">
 <b style="color:#6fffe0">Ask SKYNET AI:</b>
-<p style="font-size:13px;color:#aaa">Type e.g. "explain", "example", "quiz", "next", "what is html?"</p>
-<div id="aiChat" style="background:#fff;color:#111;padding:12px;border-radius:10px;min-height:70px;margin:8px 0;font-family:Arial;font-size:14px;line-height:1.5">Hi <span id="aiName">student</span>! I am your SKYNET AI Teacher. I will take you from Introduction to Final Project. Read the lesson above, then type <b>quiz</b> to test yourself or <b>next</b> to continue. What do you want to learn?</div>
+<p style="font-size:13px;color:#aaa">Type e.g. explain, example, quiz, next</p>
+<div id="aiChat" style="background:#fff;color:#111;padding:12px;border-radius:10px;min-height:70px;margin:8px 0;font-family:Arial;font-size:14px;line-height:1.5">Hi student! I am your SKYNET AI Teacher. I will take you from Introduction to Final Project.</div>
 <div style="display:flex;gap:6px"><input id="aiInput" placeholder="Ask AI... e.g. explain this lesson" style="flex:1;padding:12px;border-radius:10px;border:1px solid #00e5ff;background:#fff;color:#000"><button onclick="askAI()" style="padding:12px 16px;border-radius:10px;border:none;background:#25D366;color:#fff;font-weight:bold">Ask</button></div>
 <div style="margin-top:8px"><button onclick="aiQuick('quiz')" class="chip">📝 Quiz Me</button><button onclick="aiQuick('example')" class="chip">💡 More Example</button><button onclick="aiQuick('explain')" class="chip">📖 Explain Simple</button><button onclick="aiQuick('next')" class="chip">➡️ Next Lesson</button></div>
 </div>
@@ -109,80 +106,87 @@ footer{background:#020d18;padding:30px 15px;text-align:center}footer input{width
 </div></div>
 
 <script>
-let currentCourse='html', currentLesson=0;
-const COURSES={
+var currentCourse='html';
+var currentLesson=0;
+var COURSES={
 html:{name:"HTML / CSS / JAVASCRIPT - From Zero to Website",lessons:[
-{t:"1. Introduction - What is a Website?",c:"<b>Welcome!</b><br>A website is a page you open on phone/computer. Example: Google, Facebook.<br><br><b>What you will learn:</b> How to build your own website like this SKYNET site.<br><br><b>Tools:</b> Phone or computer + Notepad + Browser.<br><br><b>Your First Word:</b> HTML = HyperText Markup Language. It is the bones of a website.",code:"<!-- Your first website -->\n<h1>Hello Shianda!</h1>\n<p>I am learning coding.</p>",task:"✅ TASK: Write your name in a <h1> tag."},
-{t:"2. HTML Basics - Headings, Paragraphs, Links",c:"HTML uses TAGS. Tag opens and closes: &lt;p&gt; text &lt;/p&gt;<br><br><b>Important Tags:</b><br>• h1 to h6 = Headings<br>• p = Paragraph<br>• a = Link<br>• img = Image<br>• button = Button",code:"<h1>My Name</h1>\n<p>I am from Shianda.</p>\n<a href='https://google.com'>Go to Google</a>\n<img src='myphoto.jpg'>",task:"✅ TASK: Make a page with your name, village, and a link to Google."},
-{t:"3. HTML Forms & Lists",c:"Forms collect information. Lists show items.<br>• ul = bullet list<br>• ol = numbered list<br>• input = box to type<br>• form = form",code:"<h2>My Hobbies</h2>\n<ul><li>Football</li><li>Coding</li></ul>\n<form>\n<input placeholder='Your Name'>\n<button>Send</button>\n</form>",task:"✅ TASK: Make a registration form: Name, Phone, Course."},
-{t:"4. CSS - Make It Beautiful",c:"CSS = Styling. Colour, size, layout.<br>HTML = bones, CSS = clothes and beauty.<br>• color = text colour<br>• background = background<br>• font-size = size",code:"h1{ color:red; font-size:40px; }\np{ color:blue; }\nbutton{ background:green; color:white; padding:15px; }",task:"✅ TASK: Make your name RED and BIG, button GREEN."},
-{t:"5. CSS Layout - Flex, Cards, Mobile",c:"Good websites work on phone. Use cards, padding, border-radius.<br>• display:flex = side by side<br>• border-radius = round corners<br>• padding = space inside",code:".card{ background:white; padding:20px; border-radius:15px; box-shadow:0 0 10px gray; }",task:"✅ TASK: Turn your page into 3 beautiful cards."},
-{t:"6. JavaScript - Make It Alive",c:"JavaScript makes website respond. Click button = something happens.<br>• alert() = popup<br>• onclick = when clicked",code:"<button onclick=\"alert('Hello Shianda!')\">Click Me</button>\n<script>\nlet name='Uhsine';\nconsole.log('Hello '+name);\n</script>",task:"✅ TASK: Button that says 'Welcome' when clicked."},
-{t:"7. JavaScript - Calculator & Enroll Form",c:"Now build real apps: Calculator, Enroll form that sends to WhatsApp using wa.me link.",code:"function calc(){\n let a=Number(document.getElementById('a').value);\n let b=Number(document.getElementById('b').value);\n alert(a+b);\n}",task:"✅ TASK: Build a calculator: 2 inputs + Add button."},
-{t:"8. FINAL PROJECT - Your Portfolio Website",c:"<b>Congratulations!</b><br>Build your FULL website: Your photo, About You, Your Skills, Your Projects, Contact Button to WhatsApp.<br><br>Publish FREE on Netlify / Vercel like SKYNET site.<br><br>Show teacher for certificate + help to get clients.",code:"<!-- Portfolio Structure -->\n<header>My Name</header>\n<section>About Me</section>\n<section>My Projects</section>\n<footer>Contact Me - WhatsApp</footer>",task:"🏆 FINAL TASK: Build and publish your portfolio. You are now a Web Developer!"}
+{t:"1. Introduction - What is a Website?",c:"A website is a page you open on phone/computer. Example: Google, Facebook. You will learn to build your own website like this SKYNET site. Tools: Phone or computer + Notepad + Browser.",code:"<h1>Hello Shianda!</h1>\n<p>I am learning coding.</p>",task:"TASK: Write your name in a h1 tag."},
+{t:"2. HTML Basics - Headings, Paragraphs, Links",c:"HTML uses TAGS. Tag opens and closes. h1 to h6 = Headings, p = Paragraph, a = Link, img = Image, button = Button.",code:"<h1>My Name</h1>\n<p>I am from Shianda.</p>\n<a href='https://google.com'>Go to Google</a>",task:"TASK: Make a page with your name, village, and a link."},
+{t:"3. HTML Forms and Lists",c:"Forms collect information. ul = bullet list, ol = numbered list, input = box to type.",code:"<h2>My Hobbies</h2>\n<ul><li>Football</li><li>Coding</li></ul>\n<input placeholder='Your Name'>",task:"TASK: Make a registration form: Name, Phone, Course."},
+{t:"4. CSS - Make It Beautiful",c:"CSS = Styling. Colour, size, layout. HTML = bones, CSS = clothes and beauty.",code:"h1{ color:red; font-size:40px; }\nbutton{ background:green; color:white; padding:15px; }",task:"TASK: Make your name RED and BIG, button GREEN."},
+{t:"5. CSS Layout - Cards, Mobile",c:"Good websites work on phone. Use cards, padding, border-radius. display:flex = side by side.",code:".card{ background:white; padding:20px; border-radius:15px; }",task:"TASK: Turn your page into 3 beautiful cards."},
+{t:"6. JavaScript - Make It Alive",c:"JavaScript makes website respond. Click button = something happens. alert() = popup, onclick = when clicked.",code:"<button onclick=\"alert('Hello Shianda!')\">Click Me</button>",task:"TASK: Button that says Welcome when clicked."},
+{t:"7. JavaScript - Calculator and Enroll Form",c:"Now build real apps: Calculator, Enroll form that sends to WhatsApp using wa.me link.",code:"function calc(){\n let a = 5;\n let b = 3;\n alert(a+b);\n}",task:"TASK: Build a calculator: 2 inputs + Add button."},
+{t:"8. FINAL PROJECT - Your Portfolio Website",c:"Congratulations! Build your FULL website: Your photo, About You, Your Skills, Your Projects, Contact Button to WhatsApp. Publish FREE on Netlify / Vercel like SKYNET site.",code:"Header: My Name\nSection: About Me\nSection: My Projects\nFooter: Contact Me - WhatsApp",task:"FINAL TASK: Build and publish your portfolio. You are now a Web Developer!"}
 ]},
 python:{name:"PYTHON - From Zero to Apps",lessons:[
-{t:"1. Introduction - What is Python?",c:"Python is the easiest language. Used by Google, YouTube, Instagram.<br>You write simple English-like code and computer does it.",code:"print('Hello Shianda!')\nprint('I am learning Python')",task:"✅ TASK: Print your name and village."},
-{t:"2. Variables & Input",c:"Variable = box to keep something. input() = ask user.",code:"name = input('Your name? ')\nage = input('Your age? ')\nprint('Hello', name)",task:"✅ TASK: Ask name and course, then greet them."},
-{t:"3. Numbers & Calculator",c:"Python can calculate: + - * /",code:"a = int(input('First number: '))\nb = int(input('Second: '))\nprint('Answer =', a+b)",task:"✅ TASK: Build calculator for school fees."},
-{t:"4. If / Else - Decisions",c:"Computer decides: If you pass, say Congratulations, else try again.",code:"marks = int(input('Marks: '))\nif marks >= 50:\n  print('You Passed!')\nelse:\n  print('Try Again')",task:"✅ TASK: Check if student passed or failed."},
-{t:"5. Loops - Repeat Work",c:"for loop repeats. While loop repeats until condition.",code:"for i in range(1,6):\n  print('SKYNET', i)\n# Prints SKYNET 5 times",task:"✅ TASK: Print numbers 1 to 20."},
-{t:"6. Lists & Functions",c:"List = many items in one box. Function = reusable block.",code:"students = ['Mary','Kevin','Faith']\nprint(students)\n\ndef greet(name):\n  print('Hello', name)\ngreet('Uhsine')",task:"✅ TASK: Make list of 5 students in your class."},
-{t:"7. Files & Small Projects",c:"Build: School fee tracker, Shop stock, Quiz game.",code:"# Quiz Game\nscore=0\nans=input('What is 2+2? ')\nif ans=='4':\n  score+=1\n  print('Correct!')\nprint('Score:', score)",task:"✅ TASK: Build 3-question quiz."},
-{t:"8. FINAL PROJECT - Your Python App",c:"Build a full app: Student Registration System or Shop System.<br>Show teacher, get certificate, start charging for small jobs.",code:"# Final Project Idea\n# 1. Ask name, course, phone\n# 2. Save to file\n# 3. Print receipt\n# 4. Show all students",task:"🏆 FINAL: Build your Python App and present it!"}
+{t:"1. Introduction - What is Python?",c:"Python is the easiest language. Used by Google, YouTube, Instagram. You write simple English-like code.",code:"print('Hello Shianda!')\nprint('I am learning Python')",task:"TASK: Print your name and village."},
+{t:"2. Variables and Input",c:"Variable = box to keep something. input() = ask user.",code:"name = input('Your name? ')\nprint('Hello', name)",task:"TASK: Ask name and course, then greet them."},
+{t:"3. Numbers and Calculator",c:"Python can calculate: + - * /",code:"a = int(input('First number: '))\nb = int(input('Second: '))\nprint('Answer =', a+b)",task:"TASK: Build calculator for school fees."},
+{t:"4. If / Else - Decisions",c:"Computer decides: If you pass, say Congratulations, else try again.",code:"marks = int(input('Marks: '))\nif marks >= 50:\n  print('You Passed!')\nelse:\n  print('Try Again')",task:"TASK: Check if student passed or failed."},
+{t:"5. Loops - Repeat Work",c:"for loop repeats. While loop repeats until condition.",code:"for i in range(1,6):\n  print('SKYNET', i)",task:"TASK: Print numbers 1 to 20."},
+{t:"6. Lists and Functions",c:"List = many items in one box. Function = reusable block.",code:"students = ['Mary','Kevin','Faith']\nprint(students)",task:"TASK: Make list of 5 students in your class."},
+{t:"7. Files and Small Projects",c:"Build: School fee tracker, Shop stock, Quiz game.",code:"# Quiz Game\nscore=0\nans=input('What is 2+2? ')\nif ans=='4':\n  print('Correct!')",task:"TASK: Build 3-question quiz."},
+{t:"8. FINAL PROJECT - Your Python App",c:"Build a full app: Student Registration System or Shop System. Show teacher, get certificate.",code:"# Final Project\n# 1. Ask name, course, phone\n# 2. Save to file\n# 3. Print receipt",task:"FINAL: Build your Python App and present it!"}
 ]},
 web:{name:"WEB DESIGN - From Idea to Client Website",lessons:[
-{t:"1. Introduction - What is Web Design?",c:"Web Design = Planning + Designing websites that look good and sell.<br>Designer thinks: Who is client? What do they want? Example: Shop needs photos, price, WhatsApp button.",code:"Client: Mama Mboga Shop\nGoal: Get customers on WhatsApp\nPages: Home, Products, Contact",task:"✅ TASK: Choose a business in Shianda you want to design for."},
-{t:"2. Colours, Fonts & Layout",c:"Good design: 2 colours only, big readable font, clear buttons.<br>SKYNET uses: Dark blue + Cyan + White.",code:"Colours: #04222e (dark) + #00e5ff (cyan)\nFont: Big heading, simple body",task:"✅ TASK: Pick 2 colours for your client."},
-{t:"3. Homepage Design",c:"Homepage must have: Logo, Big headline, Photo, Services, Price, WhatsApp button, Testimonials.",code:"Header: Logo + Menu\nHero: Big Text + Button\nServices: 3 Cards\nFooter: Contact",task:"✅ TASK: Draw your homepage on paper first."},
-{t:"4. Build with HTML/CSS",c:"Turn your drawing into real code using HTML + CSS cards.",code:"<div class='card'>\n<h2>Our Services</h2>\n<p>We sell fresh vegetables</p>\n<a href='https://wa.me/...'>Order Now</a>\n</div>",task:"✅ TASK: Build homepage for your client."},
-{t:"5. Mobile Design",c:"Most customers use phone. Test on phone. Big buttons, small text, fast loading.",code:"@media(max-width:600px){\n h1{font-size:28px}\n .card{padding:15px}\n}",task:"✅ TASK: Open your site on phone. Is it easy to click?"},
-{t:"6. Canva + Images",c:"Use Canva for logo, banner, posters. Use free images from Unsplash/Pexels.",code:"Canva Steps:\n1. Logo\n2. Banner 1200x400\n3. WhatsApp poster",task:"✅ TASK: Design a logo + poster for client."},
-{t:"7. Publish & SEO",c:"Publish FREE on Netlify/Vercel. Add title, description so Google finds it.",code:"Title: Best Shop in Shianda | Fresh Vegetables\nDescription: Order on WhatsApp 07...",task:"✅ TASK: Publish your client site."},
-{t:"8. FINAL PROJECT - Sell a Website",c:"Find 1 real client: Church, Shop, School. Charge KSh 3,000 - 10,000. Build + publish + get paid.",code:"Your Portfolio:\n1. SKYNET-style site\n2. Shop site\n3. Church site",task:"🏆 FINAL: Get your first paying client!"}
+{t:"1. Introduction - What is Web Design?",c:"Web Design = Planning + Designing websites that look good and sell. Designer thinks: Who is client? What do they want?",code:"Client: Mama Mboga Shop\nGoal: Get customers on WhatsApp",task:"TASK: Choose a business in Shianda you want to design for."},
+{t:"2. Colours, Fonts and Layout",c:"Good design: 2 colours only, big readable font, clear buttons. SKYNET uses: Dark blue + Cyan + White.",code:"Colours: #04222e (dark) + #00e5ff (cyan)",task:"TASK: Pick 2 colours for your client."},
+{t:"3. Homepage Design",c:"Homepage must have: Logo, Big headline, Photo, Services, Price, WhatsApp button, Testimonials.",code:"Header: Logo + Menu\nHero: Big Text + Button",task:"TASK: Draw your homepage on paper first."},
+{t:"4. Build with HTML/CSS",c:"Turn your drawing into real code using HTML + CSS cards.",code:"<div class='card'>\n<h2>Our Services</h2>\n<p>We sell fresh vegetables</p>\n</div>",task:"TASK: Build homepage for your client."},
+{t:"5. Mobile Design",c:"Most customers use phone. Test on phone. Big buttons, small text, fast loading.",code:"h1{font-size:28px}\n.card{padding:15px}",task:"TASK: Open your site on phone. Is it easy to click?"},
+{t:"6. Canva + Images",c:"Use Canva for logo, banner, posters. Use free images from Unsplash/Pexels.",code:"Canva Steps:\n1. Logo\n2. Banner 1200x400",task:"TASK: Design a logo + poster for client."},
+{t:"7. Publish and SEO",c:"Publish FREE on Netlify/Vercel. Add title, description so Google finds it.",code:"Title: Best Shop in Shianda | Fresh Vegetables",task:"TASK: Publish your client site."},
+{t:"8. FINAL PROJECT - Sell a Website",c:"Find 1 real client: Church, Shop, School. Charge KSh 3,000 - 10,000. Build + publish + get paid.",code:"Your Portfolio:\n1. SKYNET-style site\n2. Shop site\n3. Church site",task:"FINAL: Get your first paying client!"}
 ]},
 graphic:{name:"GRAPHIC DESIGN - From Canva to Money",lessons:[
-{t:"1. Introduction - What is Graphic Design?",c:"Design = Visual communication. Posters, logos, flyers that make people buy or come to event.",code:"Examples: Church poster, Shop price list, Birthday poster",task:"✅ TASK: Find 3 posters in Shianda. What is good/bad?"},
-{t:"2. Colours & Fonts",c:"Use 2-3 colours max. 2 fonts max. Big headline, small details.",code:"Poster Rule:\nHeadline = BIG\nDate/Place = Clear\nWhatsApp = Big Button",task:"✅ TASK: Redesign a bad poster."},
-{t:"3. Canva Basics",c:"Canva.com FREE. Templates for poster, logo, business card. Drag, drop, change text.",code:"Canva Steps:\n1. Create Account\n2. Search 'Church Poster'\n3. Edit text + photo",task:"✅ TASK: Make your first poster in Canva."},
-{t:"4. Logo Design",c:"Logo = Face of business. Simple, memorable, works in black & white.",code:"Good Logo: SKYNET - Simple, 2 colours\nBad Logo: Too many colours + small text",task:"✅ TASK: Design logo for a shop."},
-{t:"5. Flyers & Posters for Business",c:"Flyer must answer: What? When? Where? How much? How to order?",code:"Flyer Checklist:\n✅ Big Title\n✅ Photo\n✅ Price\n✅ WhatsApp Number",task:"✅ TASK: Make flyer for Coding Classes."},
-{t:"6. Social Media Designs",c:"Instagram/WhatsApp Status: Square 1080x1080. Short text, big photo.",code:"Sizes:\nStatus: 1080x1920\nPost: 1080x1080\nLogo: 500x500",task:"✅ TASK: Make 3 status designs."},
-{t:"7. Pricing & Clients",c:"Charge: Poster KSh 300-500, Logo KSh 1,000-2,000, Full Branding KSh 5,000+. Always ask 50% deposit.",code:"Message to Client:\nHi, poster is KSh 500.\nSend 250 deposit, I start now.",task:"✅ TASK: Write your price list."},
-{t:"8. FINAL PROJECT - Your Portfolio",c:"Make 10 designs: 3 posters, 2 logos, 3 flyers, 2 social posts. Post on WhatsApp Status + get clients.",code:"Portfolio:\n- Church Poster\n- Shop Flyer\n- Coding Classes Poster\n- Your Logo",task:"🏆 FINAL: Get 3 paying design clients!"}
+{t:"1. Introduction - What is Graphic Design?",c:"Design = Visual communication. Posters, logos, flyers that make people buy or come to event.",code:"Examples: Church poster, Shop price list, Birthday poster",task:"TASK: Find 3 posters in Shianda. What is good/bad?"},
+{t:"2. Colours and Fonts",c:"Use 2-3 colours max. 2 fonts max. Big headline, small details.",code:"Poster Rule:\nHeadline = BIG\nDate/Place = Clear",task:"TASK: Redesign a bad poster."},
+{t:"3. Canva Basics",c:"Canva.com FREE. Templates for poster, logo, business card. Drag, drop, change text.",code:"Canva Steps:\n1. Create Account\n2. Search 'Church Poster'",task:"TASK: Make your first poster in Canva."},
+{t:"4. Logo Design",c:"Logo = Face of business. Simple, memorable, works in black and white.",code:"Good Logo: SKYNET - Simple, 2 colours",task:"TASK: Design logo for a shop."},
+{t:"5. Flyers and Posters for Business",c:"Flyer must answer: What? When? Where? How much? How to order?",code:"Flyer Checklist:\n- Big Title\n- Photo\n- Price\n- WhatsApp Number",task:"TASK: Make flyer for Coding Classes."},
+{t:"6. Social Media Designs",c:"Instagram/WhatsApp Status: Square 1080x1080. Short text, big photo.",code:"Sizes:\nStatus: 1080x1920\nPost: 1080x1080",task:"TASK: Make 3 status designs."},
+{t:"7. Pricing and Clients",c:"Charge: Poster KSh 300-500, Logo KSh 1,000-2,000, Full Branding KSh 5,000+. Always ask 50% deposit.",code:"Message: Hi, poster is KSh 500. Send 250 deposit, I start now.",task:"TASK: Write your price list."},
+{t:"8. FINAL PROJECT - Your Portfolio",c:"Make 10 designs: 3 posters, 2 logos, 3 flyers, 2 social posts. Post on WhatsApp Status + get clients.",code:"Portfolio:\n- Church Poster\n- Shop Flyer\n- Coding Classes Poster",task:"FINAL: Get 3 paying design clients!"}
 ]}
 };
-function openModal(id){document.getElementById(id).style.display='block'}
-function closeModal(id){document.getElementById(id).style.display='none'}
-function openCourse(course){currentCourse=course;currentLesson=0;renderLesson();openModal('notesModal');document.getElementById('aiName').innerText=document.getElementById('clientName')?.value||'student'}
-function openCourseFromPortal(){let c=document.getElementById('clientCourse').value;closeModal('clientsModal');openCourse(c)}
+function openModal(id){document.getElementById(id).style.display='block';}
+function closeModal(id){document.getElementById(id).style.display='none';}
+function openCourse(course){currentCourse=course;currentLesson=0;renderLesson();openModal('notesModal');}
+function openCourseFromPortal(){var c=document.getElementById('clientCourse').value;closeModal('clientsModal');openCourse(c);}
 function renderLesson(){
-let data=COURSES[currentCourse];let l=data.lessons[currentLesson];
+var data=COURSES[currentCourse];
+var l=data.lessons[currentLesson];
 document.getElementById('courseTitle').innerText=data.name;
-document.getElementById('progressText').innerText=`Lesson ${currentLesson+1} of ${data.lessons.length}`;
-document.getElementById('progressBar').innerText=`Progress ${Math.round(((currentLesson+1)/data.lessons.length)*100)}%`;
-let list=document.getElementById('lessonList');list.innerHTML='';
-data.lessons.forEach((ls,idx)=>{let b=document.createElement('button');b.innerText=(idx+1)+'. '+(idx==currentLesson?'▶ ':'')+ls.t.split('-')[0].trim();b.style.cssText='padding:6px 8px;border-radius:20px;border:none;background:'+(idx==currentLesson?'#00e5ff':'#333')+';color:'+(idx==currentLesson?'#000':'#fff')+';font-size:11px;cursor:pointer';b.onclick=()=>{currentLesson=idx;renderLesson()};list.appendChild(b)});
-document.getElementById('lessonContent').innerHTML=`<h3 style='font-size:18px;margin-bottom:8px'>${l.t}</h3><div>${l.c}</div><code>${l.code.replace(/</g,'&lt;')}</code><div style='background:#e8ffe8;padding:10px;border-radius:8px;margin-top:8px'><b>${l.task}</b></div><div style='margin-top:10px;color:#555;font-size:13px'>💡 Tip: Read slowly, try the example, do the TASK, then click Next. Ask AI if stuck.</div>`;
-document.getElementById('aiChat').innerHTML=`You are on <b>${l.t}</b>. <br>Do you understand? Type <b>explain</b> for simple explanation, <b>quiz</b> for test, or <b>next</b> to go to next lesson.`;
+document.getElementById('progressText').innerText='Lesson '+(currentLesson+1)+' of '+data.lessons.length;
+document.getElementById('progressBar').innerText='Progress '+Math.round(((currentLesson+1)/data.lessons.length)*100)+'%';
+var list=document.getElementById('lessonList');list.innerHTML='';
+for(var i=0;i<data.lessons.length;i++){
+var b=document.createElement('button');
+b.innerText=(i+1)+'. '+(i==currentLesson?'▶ ':'')+data.lessons[i].t.split('-')[0];
+b.style.cssText='padding:6px 8px;border-radius:20px;border:none;background:'+(i==currentLesson?'#00e5ff':'#333')+';color:'+(i==currentLesson?'#000':'#fff')+';font-size:11px;cursor:pointer';
+(function(idx){b.onclick=function(){currentLesson=idx;renderLesson();};})(i);
+list.appendChild(b);
 }
-function nextLesson(){let d=COURSES[currentCourse];if(currentLesson<d.lessons.length-1){currentLesson++;renderLesson()}else{document.getElementById('aiChat').innerHTML='🏆 <b>CONGRATULATIONS!</b> You finished all lessons! Now build your FINAL PROJECT and show your teacher on WhatsApp for certificate.'}}
-function prevLesson(){if(currentLesson>0){currentLesson--;renderLesson()}}
-function enterPortal(){let n=document.getElementById('clientName').value;if(!n){alert('Please enter your Name');return}document.getElementById('showName').innerText=n;document.getElementById('showCourse').innerText=COURSES[document.getElementById('clientCourse').value].name;document.getElementById('portalBox').style.display='block'}
-function askAI(){let q=document.getElementById('aiInput').value.toLowerCase();document.getElementById('aiInput').value='';if(!q) return;aiQuick(q)}
+var safeCode=l.code.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+document.getElementById('lessonContent').innerHTML='<h3 style="font-size:18px;margin-bottom:8px">'+l.t+'</h3><div>'+l.c+'</div><code>'+safeCode+'</code><div style="background:#e8ffe8;padding:10px;border-radius:8px;margin-top:8px"><b>'+l.task+'</b></div><div style="margin-top:10px;color:#555;font-size:13px">Tip: Read slowly, try the example, do the TASK, then click Next.</div>';
+document.getElementById('aiChat').innerHTML='You are on <b>'+l.t+'</b>. Type <b>explain</b> for simple explanation, <b>quiz</b> for test, or <b>next</b> to continue.';
+}
+function nextLesson(){var d=COURSES[currentCourse];if(currentLesson<d.lessons.length-1){currentLesson++;renderLesson();}else{document.getElementById('aiChat').innerHTML='🏆 <b>CONGRATULATIONS!</b> You finished all lessons! Now build your FINAL PROJECT and show your teacher on WhatsApp for certificate.';}}
+function prevLesson(){if(currentLesson>0){currentLesson--;renderLesson();}}
+function enterPortal(){var n=document.getElementById('clientName').value;if(!n){alert('Please enter your Name');return;}document.getElementById('showName').innerText=n;document.getElementById('showCourse').innerText=COURSES[document.getElementById('clientCourse').value].name;document.getElementById('portalBox').style.display='block';}
+function askAI(){var q=document.getElementById('aiInput').value.toLowerCase();document.getElementById('aiInput').value='';if(!q)return;aiQuick(q);}
 function aiQuick(q){
-let l=COURSES[currentCourse].lessons[currentLesson];
-let ans='';
-if(q.includes('quiz')){ans=`📝 <b>QUIZ for: ${l.t}</b><br>Q1: What did you learn in this lesson? <br>Q2: Can you do the TASK without looking? <br>Q3: Explain it to a friend in 1 minute.<br><br>If you can answer all 3, click Next Lesson! If not, click Explain Simple.`}
-else if(q.includes('example')){ans=`💡 <b>More Example:</b><br>Try changing one thing in the code above. Change a word, colour or number. See what happens. That is how you learn coding - by playing with code!`}
-else if(q.includes('next')){nextLesson();return}
-else if(q.includes('explain')||q.includes('simple')){ans=`📖 <b>Simple Explanation:</b><br>${l.c.replace(/<[^>]*>/g,' ').substring(0,300)}...<br><br>In short: Don't rush. Read it again, try the example, do the small TASK. You can do it!`}
-else if(q.includes('hello')||q.includes('hi')){ans=`Hello! I am SKYNET AI Teacher. You are learning <b>${COURSES[currentCourse].name}</b>. Current lesson: <b>${l.t}</b>. Ask me: explain, example, quiz, or next.`}
-else{ans=`🤖 <b>SKYNET AI:</b><br>You asked about "${q}".<br><br>In this lesson (<b>${l.t}</b>), focus on the TASK: <b>${l.task}</b>.<br><br>Try this: 1) Read lesson again 2) Copy the example code 3) Change one word 4) Do the TASK. Type <b>quiz</b> when ready!`}
+var l=COURSES[currentCourse].lessons[currentLesson];
+var ans='';
+if(q.indexOf('quiz')!==-1){ans='📝 <b>QUIZ for: '+l.t+'</b><br>Q1: What did you learn?<br>Q2: Can you do the TASK without looking?<br>Q3: Explain it to a friend in 1 minute.<br><br>If you can answer all 3, click Next Lesson!';}
+else if(q.indexOf('example')!==-1){ans='💡 <b>More Example:</b><br>Try changing one thing in the code above. Change a word, colour or number. See what happens. That is how you learn - by playing with code!';}
+else if(q.indexOf('next')!==-1){nextLesson();return;}
+else if(q.indexOf('explain')!==-1||q.indexOf('simple')!==-1){ans='📖 <b>Simple Explanation:</b><br>'+l.c+'<br><br>In short: Read again, try example, do TASK. You can do it!';}
+else{ans='🤖 <b>SKYNET AI:</b><br>You asked about "'+q+'".<br><br>Focus on TASK: <b>'+l.task+'</b>.<br><br>Try: 1) Read lesson again 2) Copy example 3) Change one word 4) Do TASK. Type <b>quiz</b> when ready!';}
 document.getElementById('aiChat').innerHTML=ans;
 }
-window.onclick=function(e){if(e.target.className=='modal')e.target.style.display='none'}
-document.getElementById('aiInput')?.addEventListener('keypress',e=>{if(e.key=='Enter')askAI()});
+window.onclick=function(e){if(e.target.className==='modal'){e.target.style.display='none';}};
 </script>
 </body>
 </html>
