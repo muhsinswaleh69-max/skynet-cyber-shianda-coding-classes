@@ -48,12 +48,10 @@ footer input{width:100%;padding:14px;border-radius:10px;border:1px solid #00e5ff
 <h2>Who We Are</h2>
 <p>SKYNET Cyber Shianda Coding Classes is a dynamic ICT training centre in Shianda, specializing in coding, web design and digital skills for students, job seekers and businesses.</p>
 </div>
-
 <div class="card">
 <h2>Our Mission</h2>
 <p>We are committed to empowering students in Shianda through practical coding skills. Our mission is to bridge the gap between technology and local opportunities, delivering high-performance training that drives growth and success.</p>
 </div>
-
 <div class="card">
 <h2>Our Vision</h2>
 <p>To be the leading provider of coding and ICT training in Western Kenya, recognized for excellence in innovation, reliability, and student-centred learning that transforms lives through technology.</p>
@@ -107,12 +105,64 @@ footer input{width:100%;padding:14px;border-radius:10px;border:1px solid #00e5ff
 <p style="margin-top:20px;color:#fff">SKYNET CYBER SHIANDA - CODING CLASSES<br>📍 Shianda | 📱 0718899014 | © 2026</p>
 </footer>
 
+<!-- FIXED FLOATING BUTTONS -->
 <div class="float">
-<a style="background:#ff3b30" href="#">G Reviews</a>
-<a style="background:#2b3a8f" href="#">🤝 Clients Area</a>
-<a style="background:#25D366" href="https://wa.me/254718899014">💬 Chat Us</a>
+<a style="background:#ff3b30;cursor:pointer" onclick="openModal('reviewsModal')">G Reviews</a>
+<a style="background:#2b3a8f;cursor:pointer" onclick="openModal('clientsModal')">🤝 Clients Area</a>
+<a style="background:#25D366" href="https://wa.me/254718899014?text=Hi SKYNET! I want to join Coding Classes">💬 Chat Us</a>
 </div>
-<a class="top" href="#">^</a>
+<a class="top" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">^</a>
+
+<!-- REVIEWS POPUP -->
+<div id="reviewsModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:100;padding:20px;overflow:auto">
+<div style="background:#0a1a2e;max-width:500px;margin:30px auto;padding:25px;border-radius:18px;border:1px solid #00e5ff">
+<h2 style="color:#6fffe0;text-align:center">⭐ Google Reviews</h2>
+<p style="text-align:center;margin:10px 0;color:#fff">4.9 / 5 - Loved by students in Shianda</p>
+<div style="background:#fff;color:#111;padding:15px;border-radius:12px;margin:10px 0"><b>⭐⭐⭐⭐⭐ Mary W. - HTML Student</b><br>"I knew nothing, now I built my own website. Best teacher in Shianda!"</div>
+<div style="background:#fff;color:#111;padding:15px;border-radius:12px;margin:10px 0"><b>⭐⭐⭐⭐⭐ Kevin O. - Python Student</b><br>"Python was made easy. Practical classes, I now do small jobs."</div>
+<div style="background:#fff;color:#111;padding:15px;border-radius:12px;margin:10px 0"><b>⭐⭐⭐⭐⭐ Faith N. - Graphic Design</b><br>"I now design posters for my business. Worth every shilling."</div>
+<p style="text-align:center;color:#6ee7ff;margin:10px 0">Want to leave a review?</p>
+<a href="https://wa.me/254718899014?text=Hi! I want to leave a REVIEW for SKYNET" style="display:block;background:#25D366;color:#fff;text-align:center;padding:13px;border-radius:10px;text-decoration:none;font-weight:bold">Leave Review on WhatsApp</a>
+<button onclick="closeModal('reviewsModal')" style="width:100%;margin-top:10px;padding:12px;border-radius:10px;border:none;background:#ff3b30;color:#fff;font-weight:bold">Close ✕</button>
+</div>
+</div>
+
+<!-- CLIENTS AREA POPUP -->
+<div id="clientsModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:100;padding:20px;overflow:auto">
+<div style="background:#0a1a2e;max-width:500px;margin:30px auto;padding:25px;border-radius:18px;border:1px solid #00e5ff">
+<h2 style="color:#6fffe0;text-align:center">🤝 Clients / Students Area</h2>
+<p style="text-align:center;margin:10px 0">Welcome back, SKYNET Student!</p>
+<input id="clientName" placeholder="Enter Your Name" style="width:100%;padding:13px;border-radius:10px;border:1px solid #00e5ff;background:transparent;color:#fff;margin:8px 0">
+<input id="clientCourse" placeholder="Your Course - e.g. Python" style="width:100%;padding:13px;border-radius:10px;border:1px solid #00e5ff;background:transparent;color:#fff;margin:8px 0">
+<button onclick="enterPortal()" style="width:100%;padding:13px;border-radius:10px;border:none;background:linear-gradient(90deg,#2b5aa6,#00e5ff);font-weight:900">Enter My Portal →</button>
+<div id="portalBox" style="display:none;margin-top:15px;background:#fff;color:#111;padding:15px;border-radius:12px">
+<b>✅ Welcome, <span id="showName"></span>!</b><br><br>
+📚 Your Course: <b><span id="showCourse"></span></b><br>
+🕒 Next Class: Today 9:30 AM - 5:30 PM (Check Timetable)<br>
+📝 Assignment: Build your portfolio project<br>
+📥 Notes: Message us on WhatsApp for notes<br><br>
+<a href="https://wa.me/254718899014?text=Hi! I need my class notes" style="display:block;background:#25D366;color:#fff;text-align:center;padding:12px;border-radius:10px;text-decoration:none;font-weight:bold">Get My Notes on WhatsApp</a>
+</div>
+<button onclick="closeModal('clientsModal')" style="width:100%;margin-top:12px;padding:12px;border-radius:10px;border:none;background:#2b3a8f;color:#fff;font-weight:bold">Close ✕</button>
+</div>
+</div>
+
+<script>
+function openModal(id){ document.getElementById(id).style.display='block'; }
+function closeModal(id){ document.getElementById(id).style.display='none'; }
+function enterPortal(){
+let n=document.getElementById('clientName').value;
+let c=document.getElementById('clientCourse').value;
+if(!n||!c){ alert('Please enter your Name and Course'); return; }
+document.getElementById('showName').innerText=n;
+document.getElementById('showCourse').innerText=c;
+document.getElementById('portalBox').style.display='block';
+}
+window.onclick=function(e){
+if(e.target.id=='reviewsModal') closeModal('reviewsModal');
+if(e.target.id=='clientsModal') closeModal('clientsModal');
+}
+</script>
 
 </body>
 </html>
