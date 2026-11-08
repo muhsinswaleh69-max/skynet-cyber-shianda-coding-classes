@@ -108,14 +108,39 @@ footer{background:#020d18;padding:30px 15px;text-align:center}footer input{width
 <button onclick="closeModal('notesModal')" style="width:100%;margin-top:12px;padding:12px;border-radius:10px;border:none;background:#ff3b30;color:#fff;font-weight:bold">Close ✕</button>
 </div></div>
 
+<!-- FINISH / CERTIFICATE MODAL - NEW -->
+<div id="finishModal" class="modal"><div class="modalBox" style="max-width:600px;text-align:center">
+<h2 style="color:#6fffe0;font-size:28px">🏆 CONGRATULATIONS!</h2>
+<p style="margin:12px 0;font-size:16px">You finished all 8 lessons + quizzes!</p>
+<p style="color:#fff;font-size:14px" id="finishCourseName">Course</p>
+<p style="color:#aaa;font-size:13px">Student: <b style="color:#fff" id="finishStudentName">SKYNET Student</b></p>
+<div style="background:#fff;color:#111;padding:20px;border-radius:14px;margin:15px 0;border:3px solid #ffcc00">
+<div style="font-size:30px">🎓</div>
+<b style="font-size:20px">SKYNET CERTIFICATE</b><br>
+<span style="font-size:13px">This student has completed</span><br>
+<b id="finishCertCourse">Course</b><br>
+<span style="font-size:13px">SKYNET CYBER SHIANDA - 2026</span><br>
+<span style="font-size:12px;color:green">⭐⭐⭐⭐⭐ Passed All Quizzes</span>
+</div>
+<div style="background:#f0faff;color:#111;padding:14px;border-radius:12px;text-align:left;font-family:Arial;font-size:14px;line-height:1.6">
+<b>📋 YOUR FINAL PROJECT:</b><br>
+1. Build your portfolio / app / website<br>
+2. Publish it FREE on Netlify / Vercel<br>
+3. Send the link to teacher on WhatsApp<br>
+4. Teacher will check and give you your real Certificate
+</div>
+<a href="https://wa.me/254718899014?text=Hi! I finished all 8 lessons + quizzes. Here is my Final Project:" style="display:block;background:#25D366;color:#fff;padding:14px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:14px">📱 Send Final Project To Teacher →</a>
+<button onclick="closeModal('finishModal');openCourse('html')" style="width:100%;padding:12px;border-radius:10px;border:none;background:linear-gradient(90deg,#2b5aa6,#00e5ff);font-weight:900;margin-top:10px">📚 Start Another Course →</button>
+<button onclick="closeModal('finishModal')" style="width:100%;padding:12px;border-radius:10px;border:none;background:#ff3b30;color:#fff;font-weight:bold;margin-top:10px">Close ✕</button>
+</div></div>
+
 <script>
 var currentCourse='html';
 var currentLesson=0;
-var quizAnswers={}; // key = course-lesson-qIndex -> chosen
+var quizAnswers={};
 var quizScore=0;
-
+var studentName='SKYNET Student';
 function Q(q,opts,ans,exp){return {q:q,opts:opts,ans:ans,exp:exp};}
-
 var COURSES={
 html:{name:"HTML / CSS / JAVASCRIPT - From Zero to Website (FULL NOTES + QUIZ)",lessons:[
 {t:"1. Introduction - What is a Website? - FULL NOTES",c:"<div class='noteSec'><b>1. WHAT IS A WEBSITE?</b><br>A website is a page you open on your phone or computer using a browser like Chrome. Examples: Google, Facebook, YouTube, and this SKYNET site. When you type www.google.com, your phone asks Google's computer for a page, and Google sends it back. That page is made of code.</div><div class='noteSec'><b>2. THE 3 PARTS OF EVERY WEBSITE</b><br><b>1) HTML</b> = Bones / Structure. It says: This is a heading, this is a paragraph, this is a button.<br><b>2) CSS</b> = Beauty / Clothes. It says: Make heading red, make button green, make card round.<br><b>3) JavaScript</b> = Brain / Action. It says: When user clicks button, show Hello, calculate total, open popup.</div><div class='noteSec'><b>3. WHAT IS CODING?</b><br>Coding is giving instructions to a computer in a language it understands. You write instructions, computer follows them exactly. If you make a mistake, computer will not guess - it will show error.</div><div class='noteSec'><b>4. TOOLS YOU NEED</b><br>Phone OR Computer + Notepad + Browser (Chrome). On phone: Acode or Spck Editor. On computer: Notepad or VS Code (free). You do NOT need internet to learn basics.</div><div class='noteSec'><b>5. HOW A WEBSITE WORKS IN REAL LIFE</b><br>Example: A shop in Shianda wants customers. They build a website with photo, price, WhatsApp button. Customer opens website, sees price, taps WhatsApp, orders. Shop makes money without being in shop.</div><div class='warnSec'><b>⚠️ COMMON MISTAKES</b><br>1) Forgetting to close a tag. 2) Typing capital letters when it should be small. 3) Not saving file as .html. 4) Giving up after 1 day.</div>",code:"<h1>Hello Shianda!</h1>\n<p>My name is Uhsine.</p>\n<p>I am learning coding at SKYNET.</p>",task:"✅ TASK: Create index.html. Write your name in h1, village in p, dream in another p. Open in Chrome.",quiz:[Q("What is HTML in a website?",["Bones / Structure","Beauty / Clothes","Brain / Action"],0,"HTML = Bones / Structure. It tells browser what each part is."),Q("What is CSS in a website?",["Bones / Structure","Beauty / Clothes","Brain / Action"],1,"CSS = Beauty / Clothes. It makes website colourful and beautiful."),Q("What is JavaScript in a website?",["Bones / Structure","Beauty / Clothes","Brain / Action"],2,"JavaScript = Brain / Action. It makes website respond when you click.")]},
@@ -161,7 +186,6 @@ graphic:{name:"GRAPHIC DESIGN - From Canva to Money (FULL NOTES + QUIZ)",lessons
 {t:"8. FINAL PROJECT - Your Portfolio - FULL NOTES",c:"<div class='noteSec'><b>1. WHAT IS PORTFOLIO?</b><br>Portfolio = Proof you can do work. Collection of your best designs. When client asks: Show me your work, you show portfolio. No portfolio = No clients. Portfolio = 10 designs.</div><div class='noteSec'><b>2. WHAT MUST PORTFOLIO HAVE?</b><br>3 Posters, 2 Logos, 3 Flyers, 2 Social Posts = 10 total. Examples: Church Poster, Shop Flyer, Coding Classes Poster, Your Logo, Birthday Poster, Business Card, Price List, WhatsApp Status, Instagram Post, Banner.</div><div class='noteSec'><b>3. HOW TO MAKE PORTFOLIO</b><br>Step 1: Make 10 designs in Canva (1 per day). Step 2: Save all in one folder on phone. Step 3: Create WhatsApp Status / Facebook album: My Designs. Step 4: Show to clients on phone. Step 5: Keep updating - replace old with better.</div><div class='noteSec'><b>4. HOW TO GET 3 PAYING CLIENTS</b><br>1) List 10 businesses, 2) Visit 5, show portfolio, 3) Offer first poster at discount to get trust, 4) Do excellent work, on time, 5) Ask them to recommend you to 2 friends. 1 happy client = 2 new clients.</div><div class='noteSec'><b>5. CERTIFICATE</b><br>Finish 8 lessons, build portfolio of 10 designs, show teacher on WhatsApp 0718899014. Teacher checks: 10 designs? Colours 2-3? Fonts 2? Spelling correct? If yes, certificate + recommendation.</div>",code:"Portfolio: 3 Posters, 2 Logos, 3 Flyers, 2 Social Posts = 10",task:"🏆 FINAL: Make 10 designs portfolio. Get 3 paying clients.",quiz:[Q("How many designs in portfolio?",["10","2","100"],0,"10 designs: 3 posters, 2 logos, 3 flyers, 2 social."),Q("What is portfolio for?",["Proof you can do work, to show clients","To waste time","To hide work"],0,"Portfolio = Proof. No portfolio = No clients."),Q("How to get more clients?",["Happy client recommends you to 2 friends","Hide work","Never post"],0,"1 happy client = 2 new clients. Post every day.")] }
 ]}
 };
-
 function openModal(id){document.getElementById(id).style.display='block';}
 function closeModal(id){document.getElementById(id).style.display='none';}
 function openCourse(course){currentCourse=course;currentLesson=0;renderLesson();openModal('notesModal');}
@@ -172,7 +196,7 @@ var l=data.lessons[currentLesson];
 quizScore=0;
 document.getElementById('courseTitle').innerText=data.name;
 document.getElementById('progressText').innerText='Lesson '+(currentLesson+1)+' of '+data.lessons.length;
-document.getElementById('progressBar').innerText='Progress '+Math.round(((currentLesson+1)/data.lessons.length)*100)+'%';
+document.getElementById('progressBar').innerText='Progress '+Math.round(((currentLesson+1)/data.lessons.length)*100+'%';
 document.getElementById('scoreText').innerText='Score: 0 / 3';
 document.getElementById('nextHint').style.display='block';
 document.getElementById('nextBtn').style.opacity='0.6';
@@ -225,7 +249,6 @@ for(var i=0;i<l.quiz.length;i++){if(quizAnswers[currentCourse+'-'+currentLesson+
 if(totalAnswered===3){
 document.getElementById('nextHint').innerHTML='✅ Quiz Done! Score '+quizScore+' / 3. You can now click Next Lesson. '+(quizScore<2?'Tip: Score is low, please read notes again before moving on.':'Great job!');
 document.getElementById('nextBtn').style.opacity='1';
-document.getElementById('quizArea').scrollIntoView({behavior:'smooth',block:'center'});
 }
 }
 function tryNextLesson(){
@@ -235,9 +258,22 @@ for(var i=0;i<l.quiz.length;i++){if(quizAnswers[currentCourse+'-'+currentLesson+
 if(totalAnswered<3){alert('Please answer all 3 quiz questions first! Scroll down to Quiz.');document.getElementById('quizArea').scrollIntoView({behavior:'smooth'});return;}
 nextLesson();
 }
-function nextLesson(){var d=COURSES[currentCourse];if(currentLesson<d.lessons.length-1){currentLesson++;renderLesson();document.getElementById('notesModal').scrollTo({top:0,behavior:'smooth'});}else{alert('🏆 CONGRATULATIONS! You finished all 8 lessons + quizzes! Now build your FINAL PROJECT and show teacher on WhatsApp for certificate.');}}
+function nextLesson(){
+var d=COURSES[currentCourse];
+if(currentLesson<d.lessons.length-1){
+currentLesson++;renderLesson();
+document.getElementById('notesModal').scrollTo({top:0,behavior:'smooth'});
+}else{
+// FIXED: Show big Certificate page, not small OK popup
+document.getElementById('finishCourseName').innerText=COURSES[currentCourse].name;
+document.getElementById('finishCertCourse').innerText=COURSES[currentCourse].name;
+document.getElementById('finishStudentName').innerText=studentName;
+closeModal('notesModal');
+openModal('finishModal');
+}
+}
 function prevLesson(){if(currentLesson>0){currentLesson--;renderLesson();}}
-function enterPortal(){var n=document.getElementById('clientName').value;if(!n){alert('Please enter your Name');return;}document.getElementById('showName').innerText=n;document.getElementById('showCourse').innerText=COURSES[document.getElementById('clientCourse').value].name;document.getElementById('portalBox').style.display='block';}
+function enterPortal(){var n=document.getElementById('clientName').value;if(!n){alert('Please enter your Name');return;}studentName=n;document.getElementById('showName').innerText=n;document.getElementById('showCourse').innerText=COURSES[document.getElementById('clientCourse').value].name;document.getElementById('portalBox').style.display='block';}
 window.onclick=function(e){if(e.target.className==='modal'){e.target.style.display='none';}};
 </script>
 </body>
